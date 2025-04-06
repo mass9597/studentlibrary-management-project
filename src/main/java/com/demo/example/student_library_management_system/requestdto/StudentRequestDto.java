@@ -13,6 +13,7 @@ public class StudentRequestDto {
     private String dob;
     private String gender;
     private String section;
+    private String bloodGroup;
 
     public String getName() {
         return name;
@@ -84,5 +85,13 @@ public class StudentRequestDto {
 
     public void setSection(String section) {
         this.section = section;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
     }
 }
