@@ -8,13 +8,9 @@ package com.demo.example.student_library_management_system.requestdto;
 public class AuthorRequestDto {
 
     private String name;
-
     private String email;
-
     private String gender;
-
     private String country;
-
     private double rating;
 
     public String getName() {
