@@ -8,6 +8,8 @@ public class TransactionRequestDto {
     private double fine;
     private String dueDate;
     private TransactionType transactionType;
+    private int cardId;
+    private int bookId;
 
 
     public double getFine() {
@@ -32,5 +34,21 @@ public class TransactionRequestDto {
 
     public void setTransactionType(TransactionType transactionType) {
         this.transactionType = transactionType;
+    }
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
     }
 }

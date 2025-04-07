@@ -1,7 +1,11 @@
 package com.demo.example.student_library_management_system.model;
 
 import com.demo.example.student_library_management_system.enums.CardStatus;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 import java.util.List;
@@ -25,18 +29,23 @@ public class Card {
     private String bloodGroup;
 
     @Column(name = "created_date", nullable = false)
+    @CreationTimestamp
     private Date createdDate;
 
     @Column(name = "updated_date", nullable = false)
+    @UpdateTimestamp
     private Date updatedDate;
 
+    @JsonBackReference
     @JoinColumn(name = "student_id")
     @OneToOne
     private Student student;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "card")
     private List<Book> book;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "card")
 
     // card can have multiple transaction, so it is declared as list.

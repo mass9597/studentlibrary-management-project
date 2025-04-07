@@ -14,7 +14,8 @@ public class BookRequestDto {
     private double price;
     private String rackNo;
     private boolean availability;
-
+    private int authorId;
+    private int cardId;
 
     public String getTitle() {
         return title;
@@ -86,5 +87,21 @@ public class BookRequestDto {
 
     public void setAvailability(boolean availability) {
         this.availability = availability;
+    }
+
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
+    }
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
     }
 }

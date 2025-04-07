@@ -10,6 +10,9 @@ import com.demo.example.student_library_management_system.requestdto.StudentRequ
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class StudentService {
 
@@ -32,5 +35,11 @@ public class StudentService {
         studentRepository.save(student);
 
         return "Student and card are saved successfully";
+    }
+
+    public List<Student> findStudents(){
+       List<Student> studentList =  studentRepository.findAll();
+
+       return studentList;
     }
 }
